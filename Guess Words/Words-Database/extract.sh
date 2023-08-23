@@ -38,7 +38,7 @@ else
     touch $dst_path
 fi
 for word in $data; do
-  echo "$word" >> out.txt
+  echo -e "${TAB}${LOG}Extracting : "; echo "$word" | $dst_path
 done
 # Check Destination File
 amount_new=$(cat $dst_path | grep -oE "[آ-ی]+" | wc -l)
